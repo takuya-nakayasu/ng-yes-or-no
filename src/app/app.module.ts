@@ -10,10 +10,12 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { MatCardModule } from '@angular/material/card';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { QuestionComponent } from './question/question.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    QuestionComponent
   ],
   imports: [
     BrowserModule,
