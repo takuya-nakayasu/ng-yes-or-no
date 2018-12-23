@@ -10,6 +10,7 @@ import { debounceTime } from 'rxjs/operators';
 export class QuestionComponent implements OnInit {
   public questionForm: FormGroup;
   public questionControl: FormControl;
+  public isNoQuestionMark: boolean;
 
   constructor(private builder: FormBuilder) {
     this.createForm();
@@ -25,8 +26,14 @@ export class QuestionComponent implements OnInit {
     });
 
     this.questionForm.get('question').valueChanges.pipe(debounceTime(500))
-    .subscribe((seachText) => {
-        console.log(seachText);
+    .subscribe((searchText) => {
+        if (searchText) {
+          if (searchText.slice(-1) === '？' || searchText.slice(-1) === '?') {
+            console.log(searchText);
+          } else {
+            this.questionControl.setErrors({'isNoQuestionMark': true});
+          }
+        }
       });
   }
 }
