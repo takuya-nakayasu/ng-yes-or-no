@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, FormBuilder } from '@angular/forms';
+import { debounceTime } from 'rxjs/operators';
 
 @Component({
   selector: 'app-question',
@@ -22,5 +23,10 @@ export class QuestionComponent implements OnInit {
     this.questionForm = this.builder.group({
       question: ['', []]
     });
+
+    this.questionForm.get('question').valueChanges.pipe(debounceTime(500))
+    .subscribe((seachText) => {
+        console.log(seachText);
+      });
   }
 }

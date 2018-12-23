@@ -4,11 +4,11 @@
       <mat-card-title class="question-title">YES/NO形式の質問をどうぞ！</mat-card-title>
     </mat-card-header>
     <mat-card-content>
-        <form class="question-form">
+        <form class="question-form" [formGroup]="questionForm">
             <!-- 氏名の入力フォーム -->
             <mat-form-field class="input-field">
               <input matInput placeholder="質問(文の最後に？をつけてください)"
-                id="question" name="question">
+                id="question" name="question" formControlName="question">
             </mat-form-field>
           </form>
     </mat-card-content>
