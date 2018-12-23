@@ -17,3 +17,10 @@
     </mat-card-content>
   </mat-card>
 </div>
+<div *ngIf="answer" class="response">
+  <div class="answer">
+    {{answer.answer | uppercase}}
+  </div>
+    <img class="gif" src="{{answer.image}}">
+</div>
+
