@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { YesnoWtfResponseEntity } from '../question/yesno-wtf-response.entity';
 
 @Component({
@@ -6,14 +6,22 @@ import { YesnoWtfResponseEntity } from '../question/yesno-wtf-response.entity';
   templateUrl: './yesno.component.html',
   styleUrls: ['./yesno.component.scss']
 })
-export class YesnoComponent implements OnInit {
+/**
+ * 質問フォームと回答結果コンポーネントの親コンポーネント
+ *
+ * @export
+ * @class YesnoComponent
+ * @implements {OnInit}
+ */
+export class YesnoComponent {
   public answer: YesnoWtfResponseEntity;
 
   constructor() { }
 
-  ngOnInit() {
-  }
-
+  /**
+   * 子コンポーネントから回答結果を取得する
+   *
+   */
   public receiveAnswer(answer: YesnoWtfResponseEntity) {
     this.answer = answer;
   }
