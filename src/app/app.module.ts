@@ -12,12 +12,14 @@ import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { QuestionComponent } from './question/question.component';
 import { AnswerComponent } from './answer/answer.component';
+import { YesnoComponent } from './yesno/yesno.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     QuestionComponent,
-    AnswerComponent
+    AnswerComponent,
+    YesnoComponent
   ],
   imports: [
     BrowserModule,
