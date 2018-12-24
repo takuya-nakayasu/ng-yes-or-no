@@ -11,11 +11,13 @@ import { MatCardModule } from '@angular/material/card';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { QuestionComponent } from './question/question.component';
+import { AnswerComponent } from './answer/answer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    QuestionComponent
+    QuestionComponent,
+    AnswerComponent
   ],
   imports: [
     BrowserModule,

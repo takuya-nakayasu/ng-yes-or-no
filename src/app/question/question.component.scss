@@ -24,24 +24,4 @@ app-question {
   .input-field {
     margin: 10px;
   }
-
-  .register-button {
-    margin: 10px;
-  }
-  .response {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    .answer {
-      position: absolute;
-      z-index: 10;
-      font-weight: bold;
-      font-size: 80px;
-      color: white;
-    }
-    .gif {
-      width: 100%;
-    }
-  }
 }
